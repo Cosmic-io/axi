@@ -17,8 +17,15 @@ document.addEventListener('DOMContentLoaded', () => {
         revealObs.unobserve(e.target);
       }
     });
-  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+  }, { threshold: 0.05, rootMargin: '0px 0px -20px 0px' });
   revealEls.forEach(el => revealObs.observe(el));
+
+  // Fallback: reveal any elements still hidden after 2s (e.g. if observer doesn't fire)
+  setTimeout(() => {
+    revealEls.forEach(el => {
+      if (!el.classList.contains('visible')) el.classList.add('visible');
+    });
+  }, 2000);
 
   /* ─── Nav Scroll → Floating Pill ─── */
   const navEl = document.getElementById('nav');

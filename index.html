@@ -37,7 +37,7 @@
     </div>
     <canvas id="heroParticles"></canvas>
     <canvas id="heroMouseGlow"></canvas>
-    <div class="container hero__content reveal">
+    <div class="container hero__content hero__content--animate">
       <div class="eyebrow-pill eyebrow-pill--hero">
         <span class="eyebrow-pill__badge">NEW</span>
         <span class="eyebrow-pill__label">AI Automation Infrastructure</span>
@@ -431,43 +431,28 @@
         </div>
         <h2 class="section-headline section-headline--light">Things We've Built</h2>
       </div>
-      <div class="work__grid">
-        <article class="work__card reveal">
-          <span class="work__card-cat">AI Automation</span>
-          <h3 class="work__card-title">Project Name Goes Here</h3>
-          <p class="work__card-desc">Short description of the project and its impact.</p>
-          <div class="work__card-img"></div>
-        </article>
-        <article class="work__card reveal">
-          <span class="work__card-cat">Web Design</span>
-          <h3 class="work__card-title">Project Name Goes Here</h3>
-          <p class="work__card-desc">Short description of the project and its impact.</p>
-          <div class="work__card-img"></div>
-        </article>
-        <article class="work__card reveal">
-          <span class="work__card-cat">Branding</span>
-          <h3 class="work__card-title">Project Name Goes Here</h3>
-          <p class="work__card-desc">Short description of the project and its impact.</p>
-          <div class="work__card-img"></div>
-        </article>
-        <article class="work__card reveal">
-          <span class="work__card-cat">Development</span>
-          <h3 class="work__card-title">Project Name Goes Here</h3>
-          <p class="work__card-desc">Short description of the project and its impact.</p>
-          <div class="work__card-img"></div>
-        </article>
-        <article class="work__card reveal">
-          <span class="work__card-cat">AI Agents</span>
-          <h3 class="work__card-title">Project Name Goes Here</h3>
-          <p class="work__card-desc">Short description of the project and its impact.</p>
-          <div class="work__card-img"></div>
-        </article>
-        <article class="work__card reveal">
-          <span class="work__card-cat">Automation</span>
-          <h3 class="work__card-title">Project Name Goes Here</h3>
-          <p class="work__card-desc">Short description of the project and its impact.</p>
-          <div class="work__card-img"></div>
-        </article>
+    </div>
+    <!-- Dynamic image showcase -->
+    <div class="work__showcase">
+      <div class="work__track">
+        <div class="work__img work__img--1" style="--delay:0"><img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop" alt="Analytics Dashboard"/></div>
+        <div class="work__img work__img--2" style="--delay:1"><img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop" alt="Data Platform"/></div>
+        <div class="work__img work__img--3" style="--delay:2"><img src="https://images.unsplash.com/photo-1559028012-481c04fa702d?w=600&h=400&fit=crop" alt="Web Design"/></div>
+        <div class="work__img work__img--4" style="--delay:3"><img src="https://images.unsplash.com/photo-1618761714954-0b8cd0026356?w=600&h=400&fit=crop" alt="Brand Identity"/></div>
+        <div class="work__img work__img--5" style="--delay:4"><img src="https://images.unsplash.com/photo-1555421689-d68471e189f2?w=600&h=400&fit=crop" alt="SaaS Product"/></div>
+        <div class="work__img work__img--6" style="--delay:5"><img src="https://images.unsplash.com/photo-1531545514256-b1400bc00f31?w=600&h=400&fit=crop" alt="Team Collaboration"/></div>
+        <!-- Duplicate for seamless loop -->
+        <div class="work__img work__img--1" style="--delay:0"><img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop" alt="Analytics Dashboard"/></div>
+        <div class="work__img work__img--2" style="--delay:1"><img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop" alt="Data Platform"/></div>
+        <div class="work__img work__img--3" style="--delay:2"><img src="https://images.unsplash.com/photo-1559028012-481c04fa702d?w=600&h=400&fit=crop" alt="Web Design"/></div>
+        <div class="work__img work__img--4" style="--delay:3"><img src="https://images.unsplash.com/photo-1618761714954-0b8cd0026356?w=600&h=400&fit=crop" alt="Brand Identity"/></div>
+        <div class="work__img work__img--5" style="--delay:4"><img src="https://images.unsplash.com/photo-1555421689-d68471e189f2?w=600&h=400&fit=crop" alt="SaaS Product"/></div>
+        <div class="work__img work__img--6" style="--delay:5"><img src="https://images.unsplash.com/photo-1531545514256-b1400bc00f31?w=600&h=400&fit=crop" alt="Team Collaboration"/></div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="work__cta reveal">
+        <a href="#" target="_blank" class="btn btn--ghost btn--lg">View Full Portfolio <span style="margin-left:4px">&#8599;</span></a>
       </div>
     </div>
   </section>
