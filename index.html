@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AXI — Design, Build, and Automate Your Business</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=DM+Mono:wght@300;400;500&family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ─── NAV ─── -->
+  <nav class="nav" id="nav">
+    <div class="nav__inner container">
+      <a href="#" class="nav__logo">axi</a>
+      <div class="nav__links">
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#work">Work</a>
+        <a href="#agents">AI Agents</a>
+      </div>
+      <a href="#contact" class="btn btn--sm btn--filled">Contact</a>
+      <button class="nav__mobile-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ─── HERO ─── -->
+  <section class="hero section--hero" id="hero">
+    <div class="hero__blobs">
+      <div class="hero__blob hero__blob--purple"></div>
+      <div class="hero__blob hero__blob--orange"></div>
+      <div class="hero__blob hero__blob--pink"></div>
+    </div>
+    <canvas id="heroParticles"></canvas>
+    <canvas id="heroMouseGlow"></canvas>
+    <div class="container hero__content reveal">
+      <div class="eyebrow-pill eyebrow-pill--hero">
+        <span class="eyebrow-pill__badge">NEW</span>
+        <span class="eyebrow-pill__label">AI Automation Infrastructure</span>
+      </div>
+      <h1 class="hero__headline">Design, Build, and Automate<br>Your Business</h1>
+      <p class="hero__sub">AXI helps companies design websites, build digital products, and deploy AI automation systems.</p>
+      <div class="hero__actions">
+        <button class="btn btn--dark btn--lg" id="heroCta">Start a Project</button>
+        <a href="#services" class="btn btn--outline-dark btn--lg">Explore Services</a>
+      </div>
+    </div>
+    <div class="hero__trust-text container reveal">
+      <p class="hero__trust-label">Trusted by teams building modern digital products</p>
+    </div>
+  </section>
+
+  <!-- ─── TRUST LOGOS (separate light section) ─── -->
+  <section class="trust-logos">
+    <div class="container">
+      <div class="trust-logos__grid">
+        <div class="trust-logos__item"><span class="trust-logo trust-logo--openai">&#9679; OpenAI</span></div>
+        <div class="trust-logos__item"><span class="trust-logo trust-logo--claude">&#10022; Claude</span></div>
+        <div class="trust-logos__item"><span class="trust-logo trust-logo--gemini">&#10022; Gemini</span></div>
+        <div class="trust-logos__item"><span class="trust-logo trust-logo--slack"># slack</span></div>
+        <div class="trust-logos__item"><span class="trust-logo trust-logo--hubspot">HubSpot</span></div>
+        <div class="trust-logos__item"><span class="trust-logo trust-logo--zapier">zapier</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── TESTIMONIAL 1 ─── -->
+  <section class="testimonial section--light reveal">
+    <div class="container">
+      <blockquote class="testimonial__quote">
+        &ldquo;CoreAI replaced hours of manual work across our sales and operations. What used to take our team days now runs automatically.&rdquo;
+      </blockquote>
+      <div class="testimonial__divider"></div>
+      <div class="testimonial__attr">
+        <div class="testimonial__avatar"></div>
+        <div class="testimonial__info">
+          <span class="testimonial__role">Founder</span>
+          <span class="testimonial__company">SaaS Company</span>
+        </div>
+        <div class="testimonial__brand">Claude</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── HOW IT WORKS ─── -->
+  <section class="how section--dark" id="about">
+    <div class="container">
+      <div class="how__header reveal">
+        <div class="eyebrow-pill eyebrow-pill--dark-on-dark">
+          <span class="eyebrow-pill__dot"></span>
+          <span class="eyebrow-pill__new">New</span>
+          <span class="eyebrow-pill__text">HOW IT WORKS</span>
+        </div>
+        <h2 class="section-headline section-headline--light">A Better Way to Design, Build,<br>and Automate Your Business</h2>
+      </div>
+      <div class="how__cards how__cards--dark">
+        <div class="how__card how__card--dark reveal">
+          <div class="how__card-illustration">
+            <svg class="hiw-svg" viewBox="0 0 200 160" fill="none">
+              <!-- Animated target/compass -->
+              <circle cx="100" cy="80" r="50" stroke="rgba(245,158,66,0.2)" stroke-width="1">
+                <animate attributeName="r" values="50;55;50" dur="3s" repeatCount="indefinite"/>
+              </circle>
+              <circle cx="100" cy="80" r="32" stroke="rgba(245,158,66,0.3)" stroke-width="1">
+                <animate attributeName="r" values="32;28;32" dur="2.5s" repeatCount="indefinite"/>
+              </circle>
+              <circle cx="100" cy="80" r="14" stroke="rgba(245,158,66,0.5)" stroke-width="1.5">
+                <animate attributeName="r" values="14;17;14" dur="2s" repeatCount="indefinite"/>
+              </circle>
+              <circle cx="100" cy="80" r="4" fill="#f59e42" opacity="0.9">
+                <animate attributeName="opacity" values="0.9;0.5;0.9" dur="1.5s" repeatCount="indefinite"/>
+              </circle>
+              <!-- Scanning line -->
+              <line x1="100" y1="25" x2="100" y2="135" stroke="rgba(245,158,66,0.15)" stroke-width="0.5">
+                <animateTransform attributeName="transform" type="rotate" from="0 100 80" to="360 100 80" dur="6s" repeatCount="indefinite"/>
+              </line>
+              <!-- Corner brackets -->
+              <path d="M55 40 L55 35 L60 35" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+              <path d="M140 35 L145 35 L145 40" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+              <path d="M145 120 L145 125 L140 125" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+              <path d="M60 125 L55 125 L55 120" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+              <!-- Floating dots -->
+              <circle cx="70" cy="50" r="1.5" fill="#f59e42" opacity="0.4">
+                <animate attributeName="cy" values="50;45;50" dur="3s" repeatCount="indefinite"/>
+              </circle>
+              <circle cx="135" cy="65" r="1" fill="#f59e42" opacity="0.3">
+                <animate attributeName="cy" values="65;60;65" dur="2.5s" repeatCount="indefinite"/>
+              </circle>
+              <circle cx="80" cy="110" r="1.5" fill="#f59e42" opacity="0.35">
+                <animate attributeName="cy" values="110;105;110" dur="2.8s" repeatCount="indefinite"/>
+              </circle>
+            </svg>
+          </div>
+          <span class="how__card-num how__card-num--dark">1</span>
+          <h3 class="how__card-title how__card-title--dark">Start With the Right Solution</h3>
+          <p class="how__card-desc how__card-desc--dark">Choose the AXI solution that fits your needs &mdash; whether launching something new, improving an existing system, or introducing automation.</p>
+        </div>
+        <div class="how__card how__card--dark reveal">
+          <div class="how__card-illustration">
+            <svg class="hiw-svg" viewBox="0 0 200 160" fill="none">
+              <!-- Collaborative build — interlocking blocks -->
+              <rect x="60" y="70" width="35" height="35" rx="4" stroke="rgba(124,92,252,0.4)" stroke-width="1" fill="rgba(124,92,252,0.08)">
+                <animate attributeName="y" values="70;66;70" dur="3s" repeatCount="indefinite"/>
+              </rect>
+              <rect x="105" y="75" width="35" height="35" rx="4" stroke="rgba(34,211,238,0.4)" stroke-width="1" fill="rgba(34,211,238,0.08)">
+                <animate attributeName="y" values="75;71;75" dur="2.5s" repeatCount="indefinite"/>
+              </rect>
+              <rect x="82" y="45" width="35" height="35" rx="4" stroke="rgba(244,114,182,0.4)" stroke-width="1" fill="rgba(244,114,182,0.08)">
+                <animate attributeName="y" values="45;41;45" dur="2.8s" repeatCount="indefinite"/>
+              </rect>
+              <!-- Connection lines -->
+              <line x1="78" y1="80" x2="105" y2="85" stroke="rgba(255,255,255,0.1)" stroke-width="0.5" stroke-dasharray="3,3">
+                <animate attributeName="stroke-dashoffset" values="0;-6" dur="1.5s" repeatCount="indefinite"/>
+              </line>
+              <line x1="95" y1="62" x2="82" y2="70" stroke="rgba(255,255,255,0.1)" stroke-width="0.5" stroke-dasharray="3,3">
+                <animate attributeName="stroke-dashoffset" values="0;-6" dur="1.5s" repeatCount="indefinite"/>
+              </line>
+              <line x1="117" y1="62" x2="122" y2="75" stroke="rgba(255,255,255,0.1)" stroke-width="0.5" stroke-dasharray="3,3">
+                <animate attributeName="stroke-dashoffset" values="0;-6" dur="1.5s" repeatCount="indefinite"/>
+              </line>
+              <!-- Small floating elements -->
+              <circle cx="50" cy="55" r="2" fill="rgba(124,92,252,0.3)">
+                <animate attributeName="r" values="2;3;2" dur="2s" repeatCount="indefinite"/>
+              </circle>
+              <circle cx="150" cy="95" r="1.5" fill="rgba(34,211,238,0.3)">
+                <animate attributeName="r" values="1.5;2.5;1.5" dur="2.5s" repeatCount="indefinite"/>
+              </circle>
+              <circle cx="145" cy="50" r="1" fill="rgba(244,114,182,0.3)">
+                <animate attributeName="r" values="1;2;1" dur="3s" repeatCount="indefinite"/>
+              </circle>
+              <!-- Cursor icon -->
+              <path d="M148 118 L148 130 L153 126 L157 133" stroke="rgba(255,255,255,0.2)" stroke-width="1" stroke-linecap="round">
+                <animate attributeName="opacity" values="0.2;0.5;0.2" dur="2s" repeatCount="indefinite"/>
+              </path>
+            </svg>
+          </div>
+          <span class="how__card-num how__card-num--dark">2</span>
+          <h3 class="how__card-title how__card-title--dark">Work With AXI</h3>
+          <p class="how__card-desc how__card-desc--dark">Our team works alongside you to design, build, and implement the solutions your business needs.</p>
+        </div>
+        <div class="how__card how__card--dark reveal">
+          <div class="how__card-illustration">
+            <svg class="hiw-svg" viewBox="0 0 200 160" fill="none">
+              <!-- Growth chart -->
+              <line x1="40" y1="130" x2="160" y2="130" stroke="rgba(255,255,255,0.08)" stroke-width="0.5"/>
+              <line x1="40" y1="105" x2="160" y2="105" stroke="rgba(255,255,255,0.05)" stroke-width="0.5"/>
+              <line x1="40" y1="80" x2="160" y2="80" stroke="rgba(255,255,255,0.05)" stroke-width="0.5"/>
+              <line x1="40" y1="55" x2="160" y2="55" stroke="rgba(255,255,255,0.05)" stroke-width="0.5"/>
+              <!-- Growth path -->
+              <path d="M45 120 Q65 115 80 100 Q95 85 110 70 Q125 55 140 40 L155 30" stroke="url(#growGrad)" stroke-width="2" fill="none" stroke-linecap="round">
+                <animate attributeName="stroke-dasharray" values="0,300;200,100" dur="2s" fill="freeze"/>
+              </path>
+              <!-- Gradient area fill -->
+              <path d="M45 120 Q65 115 80 100 Q95 85 110 70 Q125 55 140 40 L155 30 L155 130 L45 130 Z" fill="url(#growFill)" opacity="0.15">
+                <animate attributeName="opacity" values="0;0.15" dur="2s" fill="freeze"/>
+              </path>
+              <defs>
+                <linearGradient id="growGrad" x1="45" y1="120" x2="155" y2="30">
+                  <stop offset="0%" stop-color="#7c5cfc"/>
+                  <stop offset="50%" stop-color="#f472b6"/>
+                  <stop offset="100%" stop-color="#22d3ee"/>
+                </linearGradient>
+                <linearGradient id="growFill" x1="100" y1="30" x2="100" y2="130" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stop-color="#7c5cfc" stop-opacity="0.3"/>
+                  <stop offset="100%" stop-color="#7c5cfc" stop-opacity="0"/>
+                </linearGradient>
+              </defs>
+              <!-- Data points -->
+              <circle cx="80" cy="100" r="3" fill="#7c5cfc" opacity="0.8">
+                <animate attributeName="r" values="3;4;3" dur="2s" repeatCount="indefinite"/>
+              </circle>
+              <circle cx="110" cy="70" r="3" fill="#f472b6" opacity="0.8">
+                <animate attributeName="r" values="3;4;3" dur="2.5s" repeatCount="indefinite"/>
+              </circle>
+              <circle cx="155" cy="30" r="4" fill="#22d3ee" opacity="0.9">
+                <animate attributeName="r" values="4;5;4" dur="1.5s" repeatCount="indefinite"/>
+              </circle>
+              <!-- Arrow at top -->
+              <path d="M150 28 L155 22 L160 28" stroke="#22d3ee" stroke-width="1.5" fill="none" stroke-linecap="round">
+                <animate attributeName="opacity" values="0.5;1;0.5" dur="1.5s" repeatCount="indefinite"/>
+              </path>
+            </svg>
+          </div>
+          <span class="how__card-num how__card-num--dark">3</span>
+          <h3 class="how__card-title how__card-title--dark">Grow Over Time</h3>
+          <p class="how__card-desc how__card-desc--dark">As your business evolves, AXI helps you improve systems, introduce automation, and expand what's possible.</p>
+        </div>
+      </div>
+      <div class="how__divider"></div>
+      <div class="how__cta reveal">
+        <a href="#services" class="btn btn--white btn--lg">Explore solutions</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── SERVICES ─── -->
+  <section class="services section--light" id="services">
+    <div class="container">
+      <div class="services__header reveal">
+        <div class="eyebrow-pill eyebrow-pill--dark">
+          <span class="eyebrow-pill__dot"></span>
+          <span class="eyebrow-pill__new">New</span>
+          <span class="eyebrow-pill__text">SERVICES</span>
+        </div>
+        <h2 class="section-headline">Choose How You Want<br>to Work With AXI</h2>
+        <p class="services__sub">Design, development, and automation without the complexity.</p>
+      </div>
+
+      <div class="services__divider"></div>
+
+      <!-- Card 1: AXI Studio -->
+      <div class="svc-card reveal" id="svc-studio">
+        <div class="svc-card__content">
+          <div class="svc-card__label">
+            <span class="svc-card__label-prefix">AXI</span>
+            <span class="svc-card__label-name svc-card__label-name--studio">Studio</span>
+          </div>
+          <h3 class="svc-card__title">Your on-demand design and development team</h3>
+          <p class="svc-card__includes-label">Includes</p>
+          <div class="svc-card__list">
+            <ul>
+              <li><span class="svc-icon" style="background: linear-gradient(225deg, #c084fc, #f472b6)"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><rect x="1" y="1" width="4" height="4" rx="1" fill="white"/><rect x="7" y="1" width="4" height="4" rx="1" fill="white" opacity="0.6"/><rect x="1" y="7" width="4" height="4" rx="1" fill="white" opacity="0.6"/><rect x="7" y="7" width="4" height="4" rx="1" fill="white" opacity="0.4"/></svg></span>UI/UX design</li>
+              <li><span class="svc-icon" style="background: linear-gradient(225deg, #ffbb2a, #f97316)"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><rect x="1" y="2" width="10" height="8" rx="1.5" stroke="white" stroke-width="1.2"/><line x1="1" y1="5" x2="11" y2="5" stroke="white" stroke-width="1.2"/><circle cx="6" cy="8" r="1" fill="white"/></svg></span>Website design</li>
+              <li><span class="svc-icon" style="background: #1a1a1a"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 3L6 1L10 3V7L6 11L2 7V3Z" stroke="white" stroke-width="1.2" stroke-linejoin="round"/></svg></span>Branding</li>
+              <li><span class="svc-icon" style="background: #46bfe7"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><polygon points="4,2 10,6 4,10" fill="white"/></svg></span>Graphics and motion</li>
+              <li><span class="svc-icon" style="background: #4353FF"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><text x="2" y="9.5" font-size="9" font-weight="700" fill="white" font-family="sans-serif">W</text></svg></span>Webflow development</li>
+            </ul>
+            <ul>
+              <li><span class="svc-icon" style="background: #1a1a1a"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><text x="3" y="9.5" font-size="9" font-weight="700" fill="white" font-family="sans-serif">F</text></svg></span>Framer development</li>
+              <li><span class="svc-icon" style="background: #ec4899"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 10S2 7.5 2 5a2.2 2.2 0 014-1.3A2.2 2.2 0 0110 5C10 7.5 6 10 6 10Z" fill="white"/></svg></span>Lovable apps</li>
+              <li><span class="svc-icon" style="background: #1a1a1a"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><rect x="1" y="1" width="4" height="4" rx="0.8" fill="white" opacity="0.8"/><rect x="7" y="1" width="4" height="4" rx="0.8" fill="white" opacity="0.6"/><rect x="1" y="7" width="4" height="4" rx="0.8" fill="white" opacity="0.6"/><rect x="7" y="7" width="4" height="4" rx="0.8" fill="white" opacity="0.4"/></svg></span>Retool dashboards</li>
+              <li><span class="svc-icon" style="background: #1a1a1a"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><text x="2.5" y="9.5" font-size="9" font-weight="700" fill="white" font-family="sans-serif">V</text></svg></span>v0 builds</li>
+            </ul>
+          </div>
+          <div class="svc-card__price">
+            <span class="svc-card__amount">$5,500 / month</span>
+            <span class="svc-card__note">Includes 1 active slot</span>
+          </div>
+          <button class="btn btn--dark">Get Started</button>
+        </div>
+        <div class="svc-card__visual">
+          <canvas class="svc-canvas" data-theme="studio"></canvas>
+        </div>
+      </div>
+
+      <div class="svc-divider"></div>
+
+      <!-- Card 2: AXI Launch -->
+      <div class="svc-card reveal" id="svc-launch">
+        <div class="svc-card__content">
+          <div class="svc-card__label">
+            <span class="svc-card__label-prefix">AXI</span>
+            <span class="svc-card__label-name svc-card__label-name--launch">Launch</span>
+          </div>
+          <h3 class="svc-card__title">Launch something new, quickly</h3>
+          <p class="svc-card__includes-label">Common projects</p>
+          <div class="svc-card__list">
+            <ul>
+              <li><span class="svc-icon" style="background: linear-gradient(225deg, #f472b6, #c084fc)"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><rect x="1" y="2" width="10" height="8" rx="1.5" stroke="white" stroke-width="1.2"/><line x1="1" y1="5" x2="11" y2="5" stroke="white" stroke-width="1.2"/></svg></span>Landing pages</li>
+              <li><span class="svc-icon" style="background: linear-gradient(225deg, #f97316, #fbbf24)"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 9V4L6 2L10 4V5" stroke="white" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="8" cy="8" r="2.5" stroke="white" stroke-width="1.2"/></svg></span>Marketing websites</li>
+            </ul>
+            <ul>
+              <li><span class="svc-icon" style="background: #1a1a1a"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><rect x="2" y="3" width="8" height="6" rx="1" stroke="white" stroke-width="1.2"/><line x1="6" y1="3" x2="6" y2="9" stroke="white" stroke-width="1.2"/></svg></span>Brand identity kits</li>
+              <li><span class="svc-icon" style="background: linear-gradient(225deg, #c084fc, #7c5cfc)"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 1L7 4H5L6 1Z" fill="white"/><path d="M6 4V8" stroke="white" stroke-width="1.2"/><path d="M4 11H8" stroke="white" stroke-width="1.2" stroke-linecap="round"/><circle cx="6" cy="8" r="1.5" stroke="white" stroke-width="1"/></svg></span>Startup MVP design</li>
+            </ul>
+          </div>
+          <div class="svc-card__price">
+            <span class="svc-card__amount">Starting at $2,000</span>
+          </div>
+          <button class="btn btn--dark">Book a Discovery Call</button>
+        </div>
+        <div class="svc-card__visual">
+          <canvas class="svc-canvas" data-theme="launch"></canvas>
+        </div>
+      </div>
+
+      <div class="svc-divider"></div>
+
+      <!-- Card 3: AXI Automate -->
+      <div class="svc-card reveal" id="svc-automate">
+        <div class="svc-card__content">
+          <div class="svc-card__label">
+            <span class="svc-card__label-prefix">AXI</span>
+            <span class="svc-card__label-name svc-card__label-name--automate">Automate</span>
+          </div>
+          <h3 class="svc-card__title">Stop doing work AI can do</h3>
+          <p class="svc-card__includes-label">Common projects</p>
+          <div class="svc-card__list">
+            <ul>
+              <li><span class="svc-icon" style="background: #7c5cfc"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><circle cx="6" cy="4" r="2.5" stroke="white" stroke-width="1.2"/><path d="M3 10C3 8 4.5 7 6 7S9 8 9 10" stroke="white" stroke-width="1.2" stroke-linecap="round"/></svg></span>AI lead qualification</li>
+              <li><span class="svc-icon" style="background: #3b82f6"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><rect x="2" y="1" width="8" height="10" rx="1" stroke="white" stroke-width="1.2"/><line x1="4" y1="4" x2="8" y2="4" stroke="white" stroke-width="1"/><line x1="4" y1="6" x2="8" y2="6" stroke="white" stroke-width="1"/><line x1="4" y1="8" x2="6.5" y2="8" stroke="white" stroke-width="1"/></svg></span>Content automation</li>
+            </ul>
+            <ul>
+              <li><span class="svc-icon" style="background: #7c5cfc"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><rect x="3" y="1" width="6" height="4" rx="1.5" stroke="white" stroke-width="1.2"/><circle cx="4.5" cy="3" r="0.7" fill="white"/><circle cx="7.5" cy="3" r="0.7" fill="white"/><path d="M4 7H8V10C8 10.6 7.6 11 7 11H5C4.4 11 4 10.6 4 10V7Z" stroke="white" stroke-width="1.2"/></svg></span>Internal AI assistants</li>
+              <li><span class="svc-icon" style="background: #1a1a1a"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6H4L6 3L8 9L10 6H12" stroke="white" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Workflow automation</li>
+            </ul>
+          </div>
+          <div class="svc-card__slider">
+            <div class="svc-card__slider-header">
+              <span class="svc-card__plan-name" id="planName">Growth</span>
+              <span class="svc-card__plan-price" id="planPrice">$6,000</span>
+            </div>
+            <p class="svc-card__plan-note" id="planNote">3 active automation slots</p>
+            <div class="svc-card__slider-track">
+              <input type="range" min="0" max="10" value="3" step="1" class="slider" id="automateSlider" />
+              <div class="svc-card__slider-labels">
+                <span>0</span>
+                <span>10</span>
+              </div>
+            </div>
+          </div>
+          <button class="btn btn--dark">Book a Discovery Call</button>
+        </div>
+        <div class="svc-card__visual">
+          <canvas class="svc-canvas" data-theme="automate"></canvas>
+        </div>
+      </div>
+
+      <div class="svc-divider"></div>
+
+      <!-- Card 4: AXI Agents -->
+      <div class="svc-card reveal" id="svc-agents">
+        <div class="svc-card__content">
+          <div class="svc-card__label">
+            <span class="svc-card__label-prefix">AXI</span>
+            <span class="svc-card__label-name svc-card__label-name--agents">Agents</span>
+          </div>
+          <h3 class="svc-card__title">Deploy AI agents that work alongside your team</h3>
+          <p class="svc-card__includes-label">Examples</p>
+          <div class="svc-card__list">
+            <ul>
+              <li><span class="svc-icon" style="background: linear-gradient(225deg, #f472b6, #c084fc)"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><circle cx="6" cy="3.5" r="2.5" stroke="white" stroke-width="1.2"/><path d="M1.5 3.5C1.5 3.5 1 3.5 1 5S3 6.5 3 6.5" stroke="white" stroke-width="1"/><path d="M10.5 3.5C10.5 3.5 11 3.5 11 5S9 6.5 9 6.5" stroke="white" stroke-width="1"/><path d="M3 9H9" stroke="white" stroke-width="1.2" stroke-linecap="round"/></svg></span>Support agents</li>
+              <li><span class="svc-icon" style="background: #1a1a1a"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><rect x="3" y="1" width="6" height="5" rx="2" stroke="white" stroke-width="1.2"/><circle cx="4.5" cy="3.5" r="0.6" fill="white"/><circle cx="7.5" cy="3.5" r="0.6" fill="white"/><line x1="6" y1="6" x2="6" y2="8" stroke="white" stroke-width="1.2"/><path d="M3 8H9V10.5C9 11 8.5 11 8.5 11H3.5S3 11 3 10.5V8Z" stroke="white" stroke-width="1"/></svg></span>Sales assistants</li>
+            </ul>
+            <ul>
+              <li><span class="svc-icon" style="background: #7c5cfc"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M4 10L3 6H5L4 1H8L7 5H9L5 11" stroke="white" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Research agents</li>
+              <li><span class="svc-icon" style="background: #3b82f6"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><rect x="2" y="1" width="8" height="10" rx="1" stroke="white" stroke-width="1.2"/><line x1="4" y1="4" x2="8" y2="4" stroke="white" stroke-width="0.8"/><line x1="4" y1="6" x2="8" y2="6" stroke="white" stroke-width="0.8"/><line x1="4" y1="8" x2="6" y2="8" stroke="white" stroke-width="0.8"/></svg></span>Knowledge assistants</li>
+            </ul>
+          </div>
+          <div class="svc-card__price">
+            <span class="svc-card__amount">$499 / month</span>
+            <span class="svc-card__note">Includes 5M AI tokens <span class="info-tip" data-tip="AI agents use tokens when they process information and generate responses. Your plan includes 5M tokens per month, which covers typical usage for most teams. If your agents exceed this amount, additional usage is billed automatically at $10 per 1M tokens.">ⓘ</span></span>
+          </div>
+          <button class="btn btn--dark">Start Free Trial</button>
+        </div>
+        <div class="svc-card__visual">
+          <canvas class="svc-canvas" data-theme="agents"></canvas>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── MOVE FASTER ─── -->
+  <section class="speed section--dark" id="speed">
+    <div class="container">
+      <div class="speed__header reveal">
+        <div class="eyebrow-pill">
+          <span class="eyebrow-pill__dot"></span>
+          <span class="eyebrow-pill__new">New</span>
+          <span class="eyebrow-pill__text">SPEED</span>
+        </div>
+        <h2 class="section-headline section-headline--light">Move Faster With AXI</h2>
+      </div>
+      <div class="speed__compare reveal">
+        <div class="speed__circle speed__circle--trad">
+          <span class="speed__circle-label">Traditional Agencies</span>
+          <span class="speed__circle-number">12 - 16</span>
+          <span class="speed__circle-unit">week launches</span>
+        </div>
+        <div class="speed__circle speed__circle--axi">
+          <span class="speed__circle-logo">axi</span>
+          <span class="speed__circle-number speed__circle-number--lg">3 - 6</span>
+          <span class="speed__circle-unit">week launches</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── SELECTED WORK ─── -->
+  <section class="work section--dark" id="work">
+    <div class="container">
+      <div class="work__header reveal">
+        <div class="eyebrow-pill">
+          <span class="eyebrow-pill__dot"></span>
+          <span class="eyebrow-pill__new">New</span>
+          <span class="eyebrow-pill__text">SELECTED WORK</span>
+        </div>
+        <h2 class="section-headline section-headline--light">Things We've Built</h2>
+      </div>
+      <div class="work__grid">
+        <article class="work__card reveal">
+          <span class="work__card-cat">AI Automation</span>
+          <h3 class="work__card-title">Project Name Goes Here</h3>
+          <p class="work__card-desc">Short description of the project and its impact.</p>
+          <div class="work__card-img"></div>
+        </article>
+        <article class="work__card reveal">
+          <span class="work__card-cat">Web Design</span>
+          <h3 class="work__card-title">Project Name Goes Here</h3>
+          <p class="work__card-desc">Short description of the project and its impact.</p>
+          <div class="work__card-img"></div>
+        </article>
+        <article class="work__card reveal">
+          <span class="work__card-cat">Branding</span>
+          <h3 class="work__card-title">Project Name Goes Here</h3>
+          <p class="work__card-desc">Short description of the project and its impact.</p>
+          <div class="work__card-img"></div>
+        </article>
+        <article class="work__card reveal">
+          <span class="work__card-cat">Development</span>
+          <h3 class="work__card-title">Project Name Goes Here</h3>
+          <p class="work__card-desc">Short description of the project and its impact.</p>
+          <div class="work__card-img"></div>
+        </article>
+        <article class="work__card reveal">
+          <span class="work__card-cat">AI Agents</span>
+          <h3 class="work__card-title">Project Name Goes Here</h3>
+          <p class="work__card-desc">Short description of the project and its impact.</p>
+          <div class="work__card-img"></div>
+        </article>
+        <article class="work__card reveal">
+          <span class="work__card-cat">Automation</span>
+          <h3 class="work__card-title">Project Name Goes Here</h3>
+          <p class="work__card-desc">Short description of the project and its impact.</p>
+          <div class="work__card-img"></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── COMPARISON TABLE ─── -->
+  <section class="compare section--light" id="compare">
+    <div class="container">
+      <div class="compare__header reveal">
+        <div class="eyebrow-pill eyebrow-pill--dark">
+          <span class="eyebrow-pill__dot"></span>
+          <span class="eyebrow-pill__new">New</span>
+          <span class="eyebrow-pill__text">WHY AXI</span>
+        </div>
+        <h2 class="section-headline">There's a Better Way<br>Than Hiring</h2>
+      </div>
+      <div class="compare__table-wrap reveal">
+        <table class="compare__table">
+          <thead>
+            <tr>
+              <th></th>
+              <th class="compare__col--axi"><strong>AXI</strong><br><small>Fast, flexible, scalable</small></th>
+              <th><strong>Freelancers</strong><br><small>Limited capabilities</small></th>
+              <th><strong>In-House</strong><br><small>Expensive to hire</small></th>
+              <th><strong>Traditional Agency</strong><br><small>Expensive and slow</small></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Senior Expertise</td>
+              <td class="compare__col--axi"><span class="check">&check;</span></td>
+              <td><span class="xmark">&times;</span></td>
+              <td><span class="tilde">~</span></td>
+              <td><span class="check">&check;</span></td>
+            </tr>
+            <tr>
+              <td>Full Skillset</td>
+              <td class="compare__col--axi"><span class="check">&check;</span></td>
+              <td><span class="xmark">&times;</span></td>
+              <td><span class="xmark">&times;</span></td>
+              <td><span class="check">&check;</span></td>
+            </tr>
+            <tr>
+              <td>AI &amp; Automation</td>
+              <td class="compare__col--axi"><span class="check">&check;</span></td>
+              <td><span class="xmark">&times;</span></td>
+              <td><span class="xmark">&times;</span></td>
+              <td><span class="tilde">~</span></td>
+            </tr>
+            <tr>
+              <td>Start Time</td>
+              <td class="compare__col--axi">Immediate</td>
+              <td>Immediate</td>
+              <td>1-3 Months</td>
+              <td>Weeks</td>
+            </tr>
+            <tr>
+              <td>Monthly Cost</td>
+              <td class="compare__col--axi">$5.5k+</td>
+              <td>$5.5k+</td>
+              <td>$10k+</td>
+              <td>$15k+</td>
+            </tr>
+            <tr>
+              <td>Flexibility</td>
+              <td class="compare__col--axi"><span class="check">&check;</span></td>
+              <td><span class="tilde">~</span></td>
+              <td><span class="xmark">&times;</span></td>
+              <td><span class="xmark">&times;</span></td>
+            </tr>
+            <tr>
+              <td>Scalability</td>
+              <td class="compare__col--axi"><span class="check">&check;</span></td>
+              <td><span class="xmark">&times;</span></td>
+              <td><span class="xmark">&times;</span></td>
+              <td><span class="tilde">~</span></td>
+            </tr>
+            <tr>
+              <td>Communication</td>
+              <td class="compare__col--axi">Direct</td>
+              <td>Inconsistent</td>
+              <td>Internal Only</td>
+              <td>Account Managers</td>
+            </tr>
+            <tr>
+              <td>Commitment</td>
+              <td class="compare__col--axi">Month-to-Month</td>
+              <td>Per Project</td>
+              <td>Full-Time Salary</td>
+              <td>Long Contracts</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td></td>
+              <td class="compare__col--axi"><a href="#contact" class="btn btn--dark btn--sm">Start Working With AXI</a></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── FAQ ─── -->
+  <section class="faq section--light" id="faq">
+    <div class="container">
+      <div class="faq__layout">
+        <div class="faq__header reveal">
+          <div class="eyebrow-pill eyebrow-pill--dark">
+            <span class="eyebrow-pill__dot"></span>
+            <span class="eyebrow-pill__new">New</span>
+            <span class="eyebrow-pill__text">FAQ</span>
+          </div>
+          <h2 class="section-headline">Frequently<br>Asked Questions</h2>
+          <p class="faq__sub">Design, development, and automation without the complexity.</p>
+        </div>
+        <div class="faq__items reveal">
+          <details class="faq__item" open>
+            <summary class="faq__q">What should I expect during my demo call?</summary>
+            <div class="faq__a">
+              <p>During your demo call, we'll walk through your current challenges, goals, and how AXI can help. We'll show you relevant examples of our work and outline a recommended approach for your project. No pressure &mdash; just a conversation to see if we're a good fit.</p>
+            </div>
+          </details>
+          <details class="faq__item">
+            <summary class="faq__q">How fast will I receive my deliverables?</summary>
+            <div class="faq__a">
+              <p>Most requests are completed within 2-5 business days. More complex projects like full websites or applications may take 1-3 weeks depending on scope.</p>
+            </div>
+          </details>
+          <details class="faq__item">
+            <summary class="faq__q">What if I don't like the design?</summary>
+            <div class="faq__a">
+              <p>We'll keep revising until you're 100% satisfied. We work iteratively with frequent check-ins to ensure we're aligned every step of the way.</p>
+            </div>
+          </details>
+          <details class="faq__item">
+            <summary class="faq__q">Is there a limit to how many requests I can make?</summary>
+            <div class="faq__a">
+              <p>No limit on requests. We work through them one at a time based on your active slot. You can queue as many as you like and we'll prioritize them together.</p>
+            </div>
+          </details>
+          <details class="faq__item">
+            <summary class="faq__q">How does the AI automation work?</summary>
+            <div class="faq__a">
+              <p>We build custom AI workflows using tools like OpenAI, Claude, and Make.com to automate repetitive tasks in your business &mdash; from lead qualification to content generation to internal operations.</p>
+            </div>
+          </details>
+          <details class="faq__item">
+            <summary class="faq__q">Can I pause my subscription?</summary>
+            <div class="faq__a">
+              <p>Yes. You can pause your subscription at any time and resume when you're ready. Your remaining days carry over so you never lose what you've paid for.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── TESTIMONIAL 2 ─── -->
+  <section class="testimonial section--light reveal">
+    <div class="container">
+      <blockquote class="testimonial__quote">
+        &ldquo;AXI transformed our entire digital presence in weeks. The combination of design quality and AI automation is unlike anything we've seen.&rdquo;
+      </blockquote>
+      <div class="testimonial__divider"></div>
+      <div class="testimonial__attr">
+        <div class="testimonial__avatar"></div>
+        <div class="testimonial__info">
+          <span class="testimonial__role">CTO</span>
+          <span class="testimonial__company">Tech Startup</span>
+        </div>
+        <div class="testimonial__brand">OpenAI</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── FINAL CTA ─── -->
+  <section class="cta section--dark" id="contact">
+    <div class="container">
+      <div class="cta__visual reveal">
+        <canvas id="networkCanvas"></canvas>
+      </div>
+      <div class="cta__content reveal">
+        <h2 class="cta__headline">Ready to Build Something <span class="gradient-text">Better</span>?</h2>
+        <div class="cta__form">
+          <input type="email" class="cta__input" placeholder="Enter your email" />
+          <button class="btn btn--white">Start a Project</button>
+          <button class="btn btn--ghost btn--icon" aria-label="Submit">&rarr;</button>
+        </div>
+        <div class="cta__trust">
+          <span class="cta__google-logo"><span class="g-blue">G</span><span class="g-red">o</span><span class="g-yellow">o</span><span class="g-blue">g</span><span class="g-green">l</span><span class="g-red">e</span></span>
+          <div class="cta__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <div class="cta__trust-sep"></div>
+          <span>Trusted by teams automating their business</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── FOOTER ─── -->
+  <footer class="footer section--dark">
+    <div class="container footer__inner">
+      <a href="#" class="footer__logo">axi</a>
+      <div class="footer__links">
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#work">Work</a>
+        <a href="#agents">AI Agents</a>
+      </div>
+    </div>
+    <div class="container footer__bottom">
+      <p>&copy; 2026 axi. All rights reserved.</p>
+      <div class="footer__bottom-social">
+        <a href="#" aria-label="Twitter">&#120143;</a>
+        <a href="#" aria-label="Instagram">IG</a>
+        <a href="#" aria-label="LinkedIn">in</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
